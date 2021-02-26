@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="dist/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="header__container section-container">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo-lnk">
+                <img src="images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="header__content">
+            <div class="header__navigate">
+                <nav class="header__navigate-nav">
+                    <ul class="header__navigate-list">
+                        <li class="header__navigate-item has-children">
+                            <a href="catalog.html" class="header__navigate-lnk">
+                                Gallery
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item">
+                                    <a href="catalog.html" class="sub-menu__lnk">
+                                        punkt 1
+                                    </a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="catalog.html" class="sub-menu__lnk">
+                                        punkt 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__navigate-item">
+                            <a href="about.html" class="header__navigate-lnk">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__socials">
+                <a href="">
+                    <img src="images/youtube.svg" alt="logo">
+                </a>
+                <a href="">
+                    <img src="images/insta.svg" alt="logo">
+                </a>
+                <a href="">
+                    <img src="images/fb.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header__search">
+                <span class="js-show=form">
+                    <img src="images/search.svg" alt="">
+                    Search
+                </span>
+                <form method="post" class="header__search-form">
+                    <input type="text" placeholder="Search ">
+                    <label>
+                        <input type="submit">
+                        <img src="images/search.svg" alt="">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main-slider swiper-container">
+    <div class="main-slider__container swiper-wrapper">
+        <div class="main-slider__slide swiper-slide">
+            <div class="main-slider__content section-container">
+                <picture>
+                    <source media="(max-width: 500px)"
+                            srcset="images/banner.png">
+                    <img src="images/banner.png" alt="">
+                </picture>
+                <div class="main-slider__desc">
+                    <div class="main-slider__title">
+                        Evgeny Lushpin
+                    </div>
+                    <div class="main-slider__subtitle">
+                        Hyperrealism art
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider__slide swiper-slide">
+            <div class="main-slider__content section-container">
+                <picture>
+                    <source media="(max-width: 500px)"
+                            srcset="images/banner.png">
+                    <img src="images/banner.png" alt="">
+                </picture>
+                <div class="main-slider__desc">
+                    <div class="main-slider__title">
+                        Evgeny Lushpin
+                    </div>
+                    <div class="main-slider__subtitle">
+                        Hyperrealism art
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider__slide swiper-slide">
+            <div class="main-slider__content section-container">
+                <picture>
+                    <source media="(max-width: 500px)"
+                            srcset="images/banner.png">
+                    <img src="images/banner.png" alt="">
+                </picture>
+                <div class="main-slider__desc">
+                    <div class="main-slider__title">
+                        Evgeny Lushpin
+                    </div>
+                    <div class="main-slider__subtitle">
+                        Hyperrealism art
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider__slide swiper-slide">
+            <div class="main-slider__content section-container">
+                <picture>
+                    <source media="(max-width: 500px)"
+                            srcset="images/banner.png">
+                    <img src="images/banner.png" alt="">
+                </picture>
+                <div class="main-slider__desc">
+                    <div class="main-slider__title">
+                        Evgeny Lushpin
+                    </div>
+                    <div class="main-slider__subtitle">
+                        Hyperrealism art
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider__pagination">
+        <div class="section-container">
+            <div class="slide-start">01</div>
+            <div class="swiper-pagination"></div>
+            <div class="slide-end">05</div>
+        </div>
+    </div>
+</section>
+<section class="text-block">
+    <div class="text-block__container section-container">
+        <div class="text-block__content">
+            <p>
+                It's a different state of mind with each painting, but I always completely immerse myself into the time, place and subject of my art.
+            </p>
+        </div>
+        <div class="text-block__link">
+            <a href="" class="dark-button">
+                Look more...
+            </a>
+        </div>
+    </div>
+</section>
+<section class="new-collection">
+    <div class="new-collection__container section-container">
+        <h2 class="new-collection__title section-title">
+            New collection
+        </h2>
+        <div class="new-collection__list">
+            <a href="product1.html" class="new-collection__item">
+                <div class="new-collection__image">
+                    <img src="images/new-collection/1.jpg" alt="">
+                </div>
+                <div class="new-collection__year">
+                    2020
+                </div>
+                <div class="new-collection__item-title">
+                    Showers Afterglow
+                </div>
+                <div class="new-collection__size">
+                    22”x38”
+                </div>
+            </a>
+            <a href="product1.html" class="new-collection__item">
+                <div class="new-collection__image">
+                    <img src="images/new-collection/2.jpg" alt="">
+                </div>
+                <div class="new-collection__year">
+                    2020
+                </div>
+                <div class="new-collection__item-title">
+                    Showers Afterglow
+                </div>
+                <div class="new-collection__size">
+                    22”x38”
+                </div>
+            </a>
+            <a href="product1.html" class="new-collection__item">
+                <div class="new-collection__image">
+                    <img src="images/new-collection/3.jpg" alt="">
+                </div>
+                <div class="new-collection__year">
+                    2020
+                </div>
+                <div class="new-collection__item-title">
+                    Showers Afterglow
+                </div>
+                <div class="new-collection__size">
+                    22”x38”
+                </div>
+            </a>
+            <a href="product1.html" class="new-collection__item">
+                <div class="new-collection__image">
+                    <img src="images/new-collection/4.jpg" alt="">
+                </div>
+                <div class="new-collection__year">
+                    2020
+                </div>
+                <div class="new-collection__item-title">
+                    Showers Afterglow
+                </div>
+                <div class="new-collection__size">
+                    22”x38”
+                </div>
+            </a>
+            <a href="product1.html" class="new-collection__item">
+                <div class="new-collection__image">
+                    <img src="images/new-collection/5.jpg" alt="">
+                </div>
+                <div class="new-collection__year">
+                    2020
+                </div>
+                <div class="new-collection__item-title">
+                    Showers Afterglow
+                </div>
+                <div class="new-collection__size">
+                    22”x38”
+                </div>
+            </a>
+            <a href="product1.html" class="new-collection__item">
+                <div class="new-collection__image">
+                    <img src="images/new-collection/6.jpg" alt="">
+                </div>
+                <div class="new-collection__year">
+                    2020
+                </div>
+                <div class="new-collection__item-title">
+                    Showers Afterglow
+                </div>
+                <div class="new-collection__size">
+                    22”x38”
+                </div>
+            </a>
+        </div>
+        <div class="new-collection__more">
+            <a href="" class="dark-button">
+                Look more...
+            </a>
+        </div>
+    </div>
+</section>
+<section class="special">
+    <div class="special__content">
+        <h2 class="special__title section-title">
+            Giclee Special
+        </h2>
+        <div class="special__desc">
+            <p>
+                Until the end of 2020 buy one Giclee (Limited Edition Print) and receive 10% off your next purchase
+            </p>
+            <p>
+                Нужен абзац о том, что это и чем хорошо Lorem ipsum jhshgsk wpoiw [pozkjzx qwoiue[ qwpoiqwi qweouqwe qwpeq wpqwoeqwuie poqwe
+            </p>
+            <p>
+                Авместо фото справа фрагмент показывающий фактуру холста
+            </p>
+        </div>
+        <div class="special__lnk">
+            <a href="" class="dark-button">Look more...</a>
+        </div>
+    </div>
+    <div class="special__image">
+        <picture>
+            <source media="(max-width: 500px)"
+                    srcset="images/specials.jpg">
+            <img src="images/specials.jpg" alt="">
+        </picture>
+    </div>
+</section>
+<section class="hyperrealism">
+    <div class="hyperrealism__container section-container">
+        <div class="hyperrealisml__image">
+            <picture>
+                <source media="(max-width: 500px)"
+                        srcset="images/hiper.jpg">
+                <img src="images/hiper.jpg" alt="">
+            </picture>
+        </div>
+        <div class="hyperrealism__content">
+            <h2 class="hyperrealism__title section-title">
+                Hyperrealism
+            </h2>
+            <div class="hyperrealism__desc">
+                <p>
+                    Hyperrealism is a genre of painting and sculpture resembling a high-resolution photograph.
+                    Hyperrealism is considered an advancement of Photorealism by the methods used to create the
+                    resulting paintings or sculptures.
+                </p>
+                <p>
+                    Belgian art dealer Isy Brachot coined the French word Hyperréalisme, meaning Hyperrealism,
+                    as the title of a major exhibition and catalogue at his gallery in Brussels in 1973. The
+                    exhibition was dominated by such American Photorealists as Ralph Goings, Chuck Close, Don
+                    Eddy, Robert Bechtle and Richard McLean; but it included such influential European artists
+                    as Gnoli, Richter, Klapheck, and Delcol. Since then, Hyperrealism has been used by European
+                    artists and dealers to apply to painters influenced by the Photorealists.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="about__container section-container">
+        <div class="about__image">
+            <picture>
+                <source media="(max-width: 500px)"
+                        srcset="images/hiper.jpg">
+                <img src="images/about-pers.jpg" alt="">
+            </picture>
+        </div>
+        <div class="about__content">
+            <h2 class="about__title section-title">
+                About
+            </h2>
+            <div class="about__desc">
+                <p>
+                    History knows the greatest masters of light, such as the timeless masterpieces of Michelangelo,
+                    incredible portraits of Leonardo da Vinci, hypnotic play of colors and shades on Vermeer’s canvas.
+                </p>
+                <p>
+                    Within each generation, this technique evolves, transforms, gets reborn and finds new successors.
+                    Today the tradition has been passed down to one of the modern masters of light, Russian painter
+                    Evgeny Lushpin. His incredibly realistic, mystic photo-like paintings bring the viewer into
+                    unparalleled parts of the world. They make the viewer look deeper and admire the implicit
+                    beauty of surroundings that cannot be reached from the first sight.
+                </p>
+                <p>
+                    Born in 1966 not far from Moscow, Lushpin was apprenticed in Russia’s finest schools. The embodiment of his masterpieces
+                    is an endless travel across channels of old cozy towns and long avenues of world famous cities.
+                </p>
+            </div>
+            <div class="about__lnk">
+                <a href="" class="dark-button">Look more...</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="digits">
+    <div class="digits__container section-container">
+        <div class="digits__item">
+            <div class="digits__digit">
+                300+
+            </div>
+            <div class="digits__title">
+                Картин в нашей коллекции
+            </div>
+            <div class="digits__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui, eu interdum ut commodo quis. Nisi tristique magna neque ut sed hac.
+            </div>
+        </div>
+        <div class="digits__item">
+            <div class="digits__digit">
+                15<pre>лет</pre>
+            </div>
+            <div class="digits__title">
+                Занимаемся продажей картин
+            </div>
+            <div class="digits__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui, eu interdum ut commodo quis. Nisi tristique magna neque ut sed hac.
+            </div>
+        </div>
+        <div class="digits__item">
+            <div class="digits__digit">
+                125+
+            </div>
+            <div class="digits__title">
+                Vel commodo habitant cursus ipsum quam.
+            </div>
+            <div class="digits__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui, eu interdum ut commodo quis. Nisi tristique magna neque ut sed hac.
+            </div>
+        </div>
+    </div>
+</section>
+<section class="explore">
+    <div class="explore_container section-container">
+        <h2 class="explore__title section-title">
+            Explore our collection
+        </h2>
+        <div class="explore__undertitle">
+            Hyperrealism is a genre of painting and sculpture resembling a high-resolution photograph. Hyperrealism is
+            considered an advancement of Photorealism by the methods used to create the resulting paintings or sculptures.
+        </div>
+    </div>
+    <div class="explore__list swiper-container">
+        <div class="explore__wrapper swiper-wrapper">
+            <div class="explore__slide swiper-slide">
+                <img src="images/explore-collection/1.jpg" alt="">
+            </div>
+            <div class="explore__slide swiper-slide">
+                <img src="images/explore-collection/2.jpg" alt="">
+            </div>
+            <div class="explore__slide swiper-slide">
+                <img src="images/explore-collection/3.jpg" alt="">
+            </div>
+            <div class="explore__slide swiper-slide">
+                <img src="images/explore-collection/4.jpg" alt="">
+            </div>
+            <div class="explore__slide swiper-slide">
+                <img src="images/explore-collection/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="explore__lnk">
+            <a href="" class="dark-button">
+                More in catalog...
+            </a>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer">
+    <div class="footer__container section-container">
+        <div class="footer__logo">
+
+        </div>
+        <div class="footer__nav">
+
+        </div>
+    </div>
+
+</footer>
+<script src="dist/js/common.js"></script>
+
+</body>
+
+</html>
+
+
