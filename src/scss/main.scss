@@ -531,8 +531,48 @@ a{
       color: white;
     }
   }
-
 }
 .footer{
+  padding: 81px 0 58px 0;
   margin-top: 142px;
+  background-color: #1B1B1B;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo{
+    max-width: 246px;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__nav{
+    a{
+      margin-left: 36px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 170%;
+      color: #FFFFFF;
+    }
+  }
+  &__copyright{
+    margin-top: 68px;
+    text-align: center;
+    p{
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 150%;
+      color: #FFFFFF;
+      text-align: center;
+      margin-bottom: 18px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
 }
