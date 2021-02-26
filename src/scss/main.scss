@@ -18,6 +18,22 @@ a{
   outline: 0!important;
   -webkit-tap-highlight-color: transparent;
 }
+.locked{
+  //overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9)!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: all!important;
+    transition: 0.5s;
+  }
+}
 .dark-button{
   background: #1B1B1B;
   border: 1px solid #808285;
@@ -47,14 +63,73 @@ a{
   text-align: left;
   color: #FFFFFF;
   margin-left: -6px;
+  @media all and (max-width: 1024px) {
+    font-size: 50px;
+  }
 }
 .section-container{
   max-width: 1520px;
   padding: 0 100px;
   margin: auto;
   width: 100%;
+  @media all and (max-width: 1520px) {
+    padding: 0 50px;
+  }
+  @media all and (max-width: 500px) {
+    padding: 0 20px;
+  }
 }
 .header{
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  &-mobile__menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: calc(100% - 64px);
+    background-color: #111111;
+    max-width: 350px;
+    transform: translateX(-120%);
+    transition: 0.5s;
+    padding: 25px 20px;
+    &.active{
+      transform: translateX(0);
+    }
+    .header__logo{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .button-close{
+      cursor: pointer;
+      width: 19px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header__logo-lnk{
+      width: calc(100% - 64px);
+      max-width: 246px;
+      height: auto;
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
   padding: 30px 0;
   position: fixed;
   top: 0;
@@ -63,6 +138,39 @@ a{
   width: 100%;
   transition: 0.5s;
   border-bottom: 2px solid transparent;
+  &-mobile{
+    padding: 0 50px;
+    @media all and (max-width: 500px) {
+      padding: 0 20px;
+    }
+    .header__navigate{
+      position: fixed;
+      top: 0;
+      letter-spacing: 0;
+
+    }
+    &__burger{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      span{
+        width: 31px;
+        height: 5px;
+        margin: 2.5px 0;
+        background-color: white;
+        display: block;
+      }
+    }
+  }
+  &__mobile{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    @media all and (max-width: 1024px) {
+      display: flex;
+    }
+  }
   &.moved{
     background-color: rgba(0,0,0,0.92);
     border-bottom: 2px solid #d65e2a;
@@ -71,9 +179,15 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
   }
   &__socials{
     margin-right: 70px;
+    @media all and (max-width: 1024px) {
+      margin-right: 0;
+    }
     a{
       margin: 0 14px;
     }
@@ -164,6 +278,9 @@ a{
     text-transform: uppercase;
     color: #FFFFFF;
     font-family: Montserrat;
+    @media all and (max-width: 1200px) {
+      font-size: 70px;
+    }
   }
   &__subtitle{
     font-weight: 300;
@@ -172,6 +289,9 @@ a{
     text-transform: uppercase;
     color: #FFFFFF;
     font-family: Montserrat;
+    @media all and (max-width: 1200px) {
+      font-size: 70px;
+    }
   }
   &__slide{
     position: relative;
@@ -271,7 +391,36 @@ a{
   }
 }
 .catalog-page{
-
+  .new-collection{
+    padding-top: 25px;
+    &__list{
+      margin-right: -70px;
+      padding-bottom: 111px;
+      margin-top: 20px;
+    }
+    &__item{
+      position: relative;
+      width: calc(33.333% - 70px);
+      margin-right: 70px;
+      margin-bottom: 30px;
+    }
+    &__icons{
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      display: flex;
+      > div{
+        margin-right: 10px;
+        transition: 0.3s;
+        &:hover{
+          transform: scale(1.1);
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 .new-collection{
   &__title{
@@ -292,6 +441,12 @@ a{
     margin-right: 20px;
     padding: 30px;
     background-color: #1B1B1B;
+    @media all and (max-width: 1200px) {
+      width: calc(50% - 20px);
+    }
+    @media all and (max-width: 700px) {
+      width: 100%;
+    }
     &:hover{
       img{
         transform: scale(1.1);
@@ -354,14 +509,18 @@ a{
     padding-left: calc((100% - 1320px) / 2);
     padding-bottom: 180px;
     @media all and (max-width: 1520px) {
-      padding-left: 100px;
+      padding-left: 50px;
     }
   }
   &__title{
     margin-bottom: 13px;
   }
   &__desc{
-    max-width: 480px;
+    max-width: 520px;
+    padding-right: 40px;
+    @media all and (max-width: 1024px) {
+
+    }
     p{
       font-family: Roboto;
       font-style: normal;
@@ -375,6 +534,9 @@ a{
   &__image{
     width: 50%;
     overflow: hidden;
+    @media all and (max-width: 1520px) {
+      padding-right: 50px;
+    }
     img{
       object-fit: cover;
       width: 100%;
@@ -391,9 +553,11 @@ a{
   &__container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__image{
     width: calc(50% - 20px);
+    overflow: hidden;
   }
   &__content{
     width: calc(50% - 40px);
@@ -531,6 +695,9 @@ a{
     right: 150px;
     top: calc(50% - 31px);
     z-index: 10;
+    @media all and (max-width: 1520px) {
+      right: 50px;
+    }
     a{
       background-color: transparent;
       border: 1px solid #FFFFFF;
@@ -665,5 +832,58 @@ a{
         }
       }
     }
+  }
+}
+.galey-slider{
+  height: 500px;
+  position: relative;
+  &__slide{
+    picture{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__desc{
+    position: relative;
+  }
+  &__year{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+    opacity: 0.75;
+  }
+  &__title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 121%;
+    color: #F0F0F0;
+    margin-left: -4px;
+  }
+  &__size{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 116%;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  &__content{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 30px;
   }
 }

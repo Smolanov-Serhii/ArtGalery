@@ -10,6 +10,16 @@ $(document ).ready(function() {
         });
     }
 
+    if ($('.galey-slider').length){
+        const MainSlider = new Swiper('.galey-slider', {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: '.galey-slider .swiper-pagination',
+            },
+        });
+    }
+
     $(window).scroll(function(){
         $('.header').toggleClass('moved', $(this).scrollTop() > 50);
     });
@@ -69,6 +79,17 @@ $(document ).ready(function() {
     //     });
     // }
 
+    if ($('.js-mobile-burger').length){
+        $(".js-mobile-burger").click(function (){
+            $('.header').addClass('locked');
+            $('.header-mobile__menu').addClass('active');
+        });
+
+        $(".js-button-close").click(function (){
+            $('.header').removeClass('locked');
+            $('.header-mobile__menu').removeClass('active');
+        });
+    }
 
 
 });
