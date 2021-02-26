@@ -53,4 +53,22 @@ $(document ).ready(function() {
         });
     }
 
+    // if ($('.about-author').length){
+    //
+    //     window.onload = function () {
+    //         CalculateAuthor();
+    //     }
+    //     function CalculateAuthor(){
+    //         var BoxHeight = $(".footer").outerHeight();
+    //         var intViewportHeight = $(window).height();
+    //         var NeedHeight = intViewportHeight - BoxHeight;
+    //         $(".about-author").height(NeedHeight);
+    //     }
+    //     $( window ).resize(function() {
+    //         CalculateAuthor();
+    //     });
+    // }
+
+
+
 });
