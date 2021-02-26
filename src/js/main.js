@@ -58,7 +58,14 @@ $(document ).ready(function() {
             arrows: false,
             speed: 300,
             slidesToShow: 1,
+            autoplay: true,
+            draggable: false,
+            swipe: false,
+            swipeToSlide: false,
+            touchMove: false,
+            autoplaySpeed: 2000,
             centerMode: true,
+            pauseOnHover: false,
             variableWidth: true
         });
     }
