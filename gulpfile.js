@@ -29,6 +29,7 @@ const styleFiles = [
 const scriptFiles = [
    './src/js/jquery-3.5.1.js',
    './src/js/slick.js',
+   './src/js/jquery.selectric.js',
    './src/js/swiper.min.js',
    './src/js/main.js'
 ]
